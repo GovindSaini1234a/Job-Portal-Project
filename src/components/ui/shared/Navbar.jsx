@@ -8,6 +8,7 @@ import { Button } from '../button'
 import { LogOut, User2 } from 'lucide-react'
 
 const Navbar = () => {
+  const user = false;
   return (
     <div className='bg-white'>
       <div className='flex items-center justify-between mx-auto max-w-7xl h-16'>
@@ -22,7 +23,14 @@ const Navbar = () => {
             <li>Jobs</li>
             <li>Browser</li>
           </ul>
-          <Popover>
+          {
+           !user ? (      // agr user nahi hai to login and signup dikhega otherwise nahi dikhega profile dikhega 
+            <div className='flex items-center gap-2'>
+              <Link to='/login'><Button variant='outline'>Login</Button></Link>    
+              <Link to='signup'><Button  className='bg-[#6A38C2] hover:bg-[#5b38a6]'>Signup</Button></Link>
+            </div>
+           )  : (
+             <Popover>
             <PopoverTrigger asChild>
               <Avatar className='cursor-pointer'>
                 <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
@@ -52,6 +60,9 @@ const Navbar = () => {
           </div>
             </PopoverContent>
           </Popover>
+           )
+          }
+
         </div>
       </div>
       </div>

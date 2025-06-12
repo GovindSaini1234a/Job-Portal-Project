@@ -96,31 +96,30 @@ const submitHandler = async (e) => {
                     />
                 </div>
                 <div className='flex items-center justify-between'>
-                    <RadioGroup className='flex items-center gap-4 my-5'>
-                       <div className="flex items-center gap-3">
-                        <Input
-                         type='radio'
-                         name='role'
-                         value='student'
-                         checked={input.role === 'student'}
-                         onChange={changeEventHandler}
-                         className='cursor-pointer'
-                         />
-                        <RadioGroupItem value="default" id="r1" />
-                        <Label htmlFor="r1">Student</Label>
-                        </div>
-                        <div className="flex items-center gap-3">
-                        <Input
-                         type='radio'
-                         name='role'
-                         value='recruiter'
-                         checked={input.role === 'recruiter'}
-                         onChange={changeEventHandler}
-                         className='cursor-pointer'
-                         />
-                        <Label htmlFor="r2">Recruiter</Label>
-                         </div>
-                    </RadioGroup>
+                  <RadioGroup className="flex items-center gap-4 my-5">
+                            <div className="flex items-center space-x-2">
+                                <Input
+                                    type="radio"
+                                    name="role"
+                                    value="student"
+                                    checked={input.role === 'student'}
+                                    onChange={changeEventHandler}
+                                    className="cursor-pointer"
+                                />
+                                <Label htmlFor="r1">Student</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <Input
+                                    type="radio"
+                                    name="role"
+                                    value="recruiter"
+                                    checked={input.role === 'recruiter'}
+                                    onChange={changeEventHandler}
+                                    className="cursor-pointer"
+                                />
+                                <Label htmlFor="r2">Recruiter</Label>
+                            </div>
+                        </RadioGroup>
                     <div>
                         <Label>Profile</Label>
                         <Input

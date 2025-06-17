@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { USER_API_END_POINT } from '@/utils/constant'
 import { useDispatch, useSelector } from 'react-redux'
 import { setLoading } from '@/redux/authSlice'
+import { Loader2 } from 'lucide-react'
 
 const Signup = () => {
     const [input, setInput] = useState({  // ye sare data in obj hame got krna hai from user

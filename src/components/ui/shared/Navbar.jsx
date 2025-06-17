@@ -42,7 +42,7 @@ const Navbar = () => {
               <div className=''>
                 <div className='flex gap-2 space-y-2'>
                   <Avatar className='cursor-pointer'>
-                    <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
                   </Avatar>
                   <div>
                     <h4 className='font-medium'>Dubey MernStack</h4>

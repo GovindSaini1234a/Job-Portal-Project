@@ -13,8 +13,8 @@ import { setUser } from '@/redux/authSlice'
 import axios from 'axios'
 
 const Navbar = () => {
-  const user = true;
- // const {user} = useSelector(store=>store.auth);
+ // const user = false;
+  const {user} = useSelector(store=>store.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

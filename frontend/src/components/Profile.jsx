@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Navbar from './ui/shared/Navbar'
+import Navbar from './shared/Navbar'
 import { Avatar, AvatarImage } from './ui/avatar'
 import { Button } from './ui/button'
 import { Contact, Mail, Pen } from 'lucide-react'
@@ -8,12 +8,16 @@ import { Label } from './ui/label'
 import AppliedJobTable from './AppliedJobTable'
 import UpdateProfileDialog from './UpdateProfileDialog'
 import { useSelector } from 'react-redux'
+import useGetAppliedJobs from '@/hooks/useGetAppliedJobs'
 
-//const skills = ['HTML', 'CSS','Javascript','Reactjs']
+// const skills = ["Html", "Css", "Javascript", "Reactjs"]
 const isResume = true;
+
 const Profile = () => {
-  const [open, setOpen] = useState(false);    
-  const {user} = useSelector(store=>store.auth);
+    useGetAppliedJobs();
+    const [open, setOpen] = useState(false);
+    const {user} = useSelector(store=>store.auth);
+
     return (
         <div>
             <Navbar />
@@ -62,6 +66,7 @@ const Profile = () => {
             </div>
             <UpdateProfileDialog open={open} setOpen={setOpen}/>
         </div>
-  )
-} 
+    )
+}
+
 export default Profile

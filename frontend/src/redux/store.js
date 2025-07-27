@@ -12,8 +12,8 @@ import {
     REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-//import companySlice from "./companySlice";
-//import applicationSlice from "./applicationSlice";
+import companySlice from "./companySlice";
+import applicationSlice from "./applicationSlice";
 
 const persistConfig = {
     key: 'root',
